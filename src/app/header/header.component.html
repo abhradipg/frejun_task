@@ -1,0 +1,15 @@
+<div style="overflow:auto">
+    <div *ngIf="isloggedin" class="float_right headeroptions">
+        <ul>
+            <li [ngClass]="{'selected': page=='user'}"><a routerLink="/users" routerLinkActive="active">Users List</a></li>
+            <li [ngClass]="{'selected': page=='resource'}"><a routerLink="/resources" routerLinkActive="active">Resource List</a></li>
+            <li (click)="logout()"><a>Log Out</a></li>
+        </ul>
+   </div>
+    <div class="headertitle">
+        <b><span style="color:black">Fre</span>
+        <span style="color:rgb(29, 170, 29)">Jun</span></b> - task
+    </div>
+
+    <mat-divider></mat-divider>
+</div>

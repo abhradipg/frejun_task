@@ -1,0 +1,27 @@
+.userlist{
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+mat-card{
+    margin:1rem;
+    width:240px;
+}
+mat-card-header{
+    display: flex;
+    justify-content: center;
+}
+mat-card-content{
+    display: flex;
+    justify-content: center;
+}
+.nav_icon{
+    display: inline-block;
+    cursor:pointer;
+    margin: 1rem;
+}
+.nav{
+    display: inline-flex;
+    justify-content: center;
+    width:100%;
+}

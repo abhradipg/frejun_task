@@ -1,0 +1,43 @@
+.headertitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:60px;
+    font-size: 2rem;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  li {
+    display: inline-block;
+    font: 1.5rem;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px solid white;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    color: white;
+    background-color: rgb(83, 82, 82);
+  }
+.headeroptions{
+    height: 60px;
+}
+.selected a{
+    color: white;
+    background-color: rgb(83, 82, 82);  
+}

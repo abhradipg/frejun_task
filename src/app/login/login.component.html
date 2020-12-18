@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="formcontainer">
+
+<form [formGroup]="loginForm" class="login-form">
+    <div style="font-size: 1.5rem;margin-bottom: 1rem;">Login</div>
+    <mat-form-field class="login-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="emailFormControl" 
+             placeholder="Ex. pat@example.com" [email]="true">
+      <mat-hint>Enter registered email</mat-hint>
+    </mat-form-field>
+    <mat-form-field class="login-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="passwordFormControl">
+        <mat-hint>Enter password</mat-hint>
+    </mat-form-field>
+    <div style="color: red;" *ngIf="error">*Some error occured</div>
+    <button mat-flat-button  color="primary" [disabled]="!loginForm.valid" (click)="login()">Submit</button>
+  </form>
+
+</div>

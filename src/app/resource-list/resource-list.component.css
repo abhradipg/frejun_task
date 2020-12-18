@@ -1,0 +1,18 @@
+.mat-cell,.mat-header-cell{
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
+.table_container{
+  display: flex;
+  justify-content: center;
+}
+.nav_icon{
+    display: inline-block;
+    cursor:pointer;
+    margin: 1rem;
+}
+.nav{
+    display: inline-flex;
+    justify-content: center;
+    width:100%;
+}
