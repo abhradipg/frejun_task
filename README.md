@@ -1,27 +1,24 @@
-# FrejunTask
+FreJun task -
+The first page in a login page where user enters their username and password.
+I made it using FormsModule and MatFormFieldModule I used validations in both the fields and the submit button remains disabled if the form is invalid.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+ ![image](https://user-images.githubusercontent.com/42342400/148571909-1f80b889-281b-4822-8efb-ab23b9ced339.png)
 
-## Development server
+Sample input to login is email - “eve.holt@reqres.in”, password – “1234”.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+After login it saves a token in local storage which it receives as response from API call. This token is used to verify if the user is actually logged in while visiting other pages. After  Logging in the user is redirected to users list page where user data is displayed as MatCard.
 
-## Code scaffolding
+ ![image](https://user-images.githubusercontent.com/42342400/148571970-49ac07bd-9de5-43a5-b60b-d0ea1b0426a0.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In resource list page the data is shown as MatTable.
 
-## Build
+ ![image](https://user-images.githubusercontent.com/42342400/148572002-166a4c78-96b5-4a3b-a2fb-bdc33bc23505.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+If a user who is not logged in tries to visit any of these two pages then popup will appear telling him to login. I done it using MatDialog. After clicking on close the user is redirected to login page.
 
-## Running unit tests
+ ![image](https://user-images.githubusercontent.com/42342400/148572031-d504fcbc-937c-4950-a579-c9f90ca720e3.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+If a logged in user tries to visit login page he will be redirected to users list page.
 
-## Running end-to-end tests
+On clicking logout the token from local Storage is removed and user is redirected to login page.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
